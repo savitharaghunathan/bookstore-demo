@@ -1,7 +1,10 @@
 package com.konveyor.bookstore_demo.model;
 
 import javax.persistence.*;
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 @Entity
 @Table(name="book")
 public class Book {
